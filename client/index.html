@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="./assets/css/styles.css">
-		<!-- <base href="/"> -->
-		<title>Angular</title>
-	</head>
-	<body ng-app="myApp">
-		<div ng-controller="myCtrl">
-			<input type="text" ng-model="variable">
-			<button ng-click='sayHello()'>Click</button>
-			<p>Hello world</p>
-			<p>{{variable}}</p>
-		</div>
-		<a ui-sref="hello" ui-sref-active="active">Hello</a>
-  		<a ui-sref="about" ui-sref-active="active">About</a>
-		<ui-view></ui-view>
-		<script src="/assets/lib/angular/angular.min.js"></script>
-		<script src="/assets/lib/angular-ui-router/release/angular-ui-router.js"></script>
-		<script src="/app/app.js"></script>
-		<script src="/app/controller/myCtrl.js"></script>
-		<script src="/app/config/config.js"></script>
-	</body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	<title>Document</title>
+	<base href="/">
+</head>
+<body ng-app="myApp">
+	<ui-view></ui-view>
+	<script src="/assets/lib/angular/angular.min.js"></script>
+	<script src="/assets/lib/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="/assets/lib/angular-resource/angular-resource.js"></script>
+	<script src="/app/app.js"></script>
+	<script type="text/javascript" src="/app/services/photon.service.js"></script>
+	<script type="text/javascript" src="/app/services/event.service.js"></script>
+	<script src="/app/controller/ctrlListe.js"></script>
+	<script src="/app/controller/ctrlInfos.js"></script>
+	<script src="/app/controller/ctrlEvents.js"></script>
+	<script type="text/javascript" src="/app/config/config.js"></script>
+</body>
 </html>

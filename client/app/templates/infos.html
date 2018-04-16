@@ -1,0 +1,10 @@
+<div class="container">
+	<h1>Infos Photon</h1>
+	<ul>
+		<li ng-repeat="(key, info) in photon">{{key}} : {{info}}</li>
+	</ul>
+</div>
+
+<a ui-sref="home">Retour liste</a>
+<a ui-sref="events({id: photon_id})">Events</a>
+

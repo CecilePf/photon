@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "mongoose": "^5.0.7"
+    "mongoose": "^5.0.14",
+    "particle-api-js": "^7.2.0",
+    "socket.io": "^2.1.0"
   }
 }
