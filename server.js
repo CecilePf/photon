@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ type: 'application/json' }));
 
 /////////////////////
-particle.login({username: 'empty0@live.fr', password: '58m77mParticle'}).then(
+particle.login({username: 'empty0@live.fr', password: 'Particle57'}).then(
     function(data) {
         token = data.body.access_token;
         var devicesPr = particle.listDevices({ auth: token });
