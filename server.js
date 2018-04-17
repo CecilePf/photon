@@ -9,6 +9,7 @@ const mongoose = require("mongoose");
 const Photon = require('./models/photon.model');
 const Event = require('./models/event.model');
 mongoose.connect('mongodb://localhost:27017/photons');
+var io = require('socket.io')(8000);
 
 //Pour servir le css etc ...
 app.use('/assets', express.static('client/static'));
@@ -68,10 +69,11 @@ particle.login({username: 'empty0@live.fr', password: '58m77mParticle'}).then(
         );
     particle.getEventStream({ deviceId: '2c002d000447363333343435', auth: token }).then(function(stream) {
         stream.on('event', function(data) {
-                console.log("Event: ", data);
+                //console.log("Event: ", data);
                 var evenement = new Event(data);
-                evenement.save().then(function(err, res) {
-                    console.log(err);
+                evenement.save().then(function(res, err) {
+                    io.emit('event', res);
+                    console.log(res);
                 });
             });
         });

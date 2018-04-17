@@ -1,8 +1,32 @@
 <h1>Events</h1>
 
-<ul>
+<!-- <ul>
 	<li ng-repeat="event in evenements">{{event}}</li>
-</ul>
+</ul> -->
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Id</th>
+			<th>data</th>
+			<th>Published at</th>
+			<th>Core id</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="event in evenements">
+			<td>{{$index + 1}}</td>
+			<td>{{event._id}}</td>
+			<td>{{event.data}}</td>
+			<td>{{event.published_at}}</td>
+			<td>{{event.coreid}}</td>
+			<td>{{event.name}}</td>
+		</tr>
+	</tbody>
+</table>
+
 
 <a ui-sref="home">Retour liste</a>
 <a ui-sref="infos({id: photon_id})">Retour Photon</a>
